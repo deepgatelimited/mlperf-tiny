@@ -1,0 +1,38 @@
+# Zephyr workspace metadata (created by `west init -l .`)
+.west/
+
+# CMake / west build artifacts
+build/
+build_*/
+*.o
+*.obj
+*.elf
+*.bin
+*.hex
+*.map
+
+
+# Test datasets fetched on demand (CIFAR-10 .bin samples etc).
+runner/tests/data/
+
+# Python venvs / caches (the runner/tests harness uses uv)
+.venv/
+__pycache__/
+*.pyc
+.ruff_cache/
+.pytest_cache/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# macOS
+.DS_Store
+
+# submission_checker.py CSV output (regenerated on each run)
+summary.csv
+
+# zephyr modules
+zephyr
+modules

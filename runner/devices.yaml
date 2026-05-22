@@ -1,0 +1,47 @@
+# MLPerf Tiny device configuration for the official runner
+# (mlcommons/tiny benchmark/runner/main.py).
+#
+# Use with (where $TINY is a clone of mlcommons/tiny and $REPO is this repo):
+#     python $TINY/benchmark/runner/main.py \
+#         --device_list=$REPO/runner/devices.yaml \
+#         --dataset_path=$DATASETS \
+#         --test_script=tests_performance.yaml \
+#         --mode=p
+#
+# Verify USB VID:PIDs against `python -m serial.tools.list_ports -v` on
+# your machine. The values below are the typical defaults but vary by
+# probe revision.
+
+# Optional STMicroelectronics LPM01A PowerShield for energy mode. Only
+# needed if you pass --mode=e. Performance/accuracy modes connect the
+# host directly to the DUT via the board's debug-probe VCP.
+- name: lpm01a
+  type: power
+  baud: 3686400
+  echo: False
+  preference: 1
+  voltage: 3.3
+  usb:
+    0x0483: 0x5740   # ST PowerShield
+
+# DUTs: one entry per board our firmware supports. The runner picks the
+# first matching one it can detect on USB.
+- name: nucleo_h7a3zi_q
+  type: dut
+  baud:
+    energy: 921600
+    performance: 921600
+    accuracy: 921600
+  usb:
+    0x0483: 0x374E   # ST-Link V3
+
+# Silicon Labs xG24 Explorer Kit (BRD2703A, EFR32MG24B210F1536IM48).
+# WSTK onboard J-Link OB exposes a virtual COM port wired to USART0.
+- name: xg24_ek2703a
+  type: dut
+  baud:
+    energy: 115200
+    performance: 115200
+    accuracy: 115200
+  usb:
+    0x1366: 0x1024   # SEGGER J-Link OB

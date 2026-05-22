@@ -1,0 +1,31 @@
+# West manifest for the MLPerf Tiny 2026 Zephyr DUT firmware. From the repo
+# root, run:
+#
+#     uv run west init -l manifest
+#     uv run west update
+#
+# That will clone the modules listed below into a sibling .west/ workspace
+# directory and let `west build -b <board> firmware/<bench>` work.
+
+manifest:
+  version: 1.2
+
+  self:
+    path: manifest
+
+  projects:
+    - name: zephyr
+      revision: v4.4.0
+      url: https://github.com/zephyrproject-rtos/zephyr
+      # Register west extension commands (build, flash, debug, etc.)
+      west-commands: scripts/west-commands.yml
+      import:
+        file: west.yml
+        # Only import the modules we actually need for our supported boards.
+        # If you add a new board, you may need to widen this allowlist.
+        name-allowlist:
+          - cmsis        # ARM CMSIS headers (Cortex-A/R)
+          - cmsis_6      # ARM CMSIS v6 headers (Cortex-M) - required for STM32
+          - hal_stm32    # STM32 HAL drivers (NUCLEO-H7A3ZI-Q)
+          - hal_silabs   # Silicon Labs HAL drivers (xG24 Explorer Kit / EFR32MG24)
+          - picolibc     # full printf incl. %f for th_results float output

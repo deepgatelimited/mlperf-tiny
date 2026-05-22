@@ -1,0 +1,50 @@
+# Perf-mode test script for xg24_ek2703a (EFR32MG24).
+#
+# Iteration counts adjusted so each window clears the runner's
+# >= 10-second requirement at xG24 inference throughput. The upstream
+# tests_performance.yaml defaults are tuned for boards even slower than
+# the EFR32MG24; on this DUT they don't run long enough per window and
+# the runner emits ERROR 2.
+#
+# Pass with --test_script=$REPO/runner/tests_performance_xg24.yaml when
+# invoking $TINY/benchmark/runner/main.py for xG24.
+ad01:
+  name: anomoly_detection
+  model: ad01
+  truth_file: y_labels.csv
+  script:
+    - loop 5:
+      - download
+      - infer 5000 10
+ic01:
+  name: image_classification
+  model: ic01
+  truth_file: y_labels.csv
+  script:
+    - loop 5:
+      - download
+      - infer 100 20
+ic02:
+  name: image_classification
+  model: ic01
+  truth_file: y_labels.csv
+  script:
+    - loop 5:
+      - download
+      - infer 20 2
+kws01:
+  name: keyword_spotting
+  model: kws01
+  truth_file: y_labels.csv
+  script:
+    - loop 5:
+      - download
+      - infer 400 50
+vww01:
+  name: person_detection
+  model: vww01
+  truth_file: y_labels.csv
+  script:
+    - loop 5:
+      - download
+      - infer 100 20

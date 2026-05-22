@@ -1,0 +1,49 @@
+# Perf-mode test script for nucleo_h7a3zi_q.
+#
+# Mirrors mlcommons/tiny's benchmark/runner/tests_performance_h7a3.yaml
+# but with higher per-window iteration counts where needed so each
+# window meets the runner's >= 10 second requirement against the
+# DeepGate compiler's faster libmodel.a build for the H7A3.
+#
+# Pass with --test_script=$REPO/runner/tests_performance_h7a3.yaml when
+# invoking $TINY/benchmark/runner/main.py.
+ad01:
+  name: anomoly_detection
+  model: ad01
+  truth_file: y_labels.csv
+  script:
+    - loop 5:
+      - download
+      - infer 10000 10
+ic01:
+  name: image_classification
+  model: ic01
+  truth_file: y_labels.csv
+  script:
+    - loop 5:
+      - download
+      - infer 200 50
+ic02:
+  name: image_classification
+  model: ic01
+  truth_file: y_labels.csv
+  script:
+    - loop 5:
+      - download
+      - infer 50 10
+kws01:
+  name: keyword_spotting
+  model: kws01
+  truth_file: y_labels.csv
+  script:
+    - loop 5:
+      - download
+      - infer 1000 100
+vww01:
+  name: person_detection
+  model: vww01
+  truth_file: y_labels.csv
+  script:
+    - loop 5:
+      - download
+      - infer 250 50
