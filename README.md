@@ -1,6 +1,6 @@
 # MLPerf Tiny v1.4: DeepGate submission
 
-Zephyr-based DUT firmware for the **MLPerf Tiny v1.4** Inference benchmarks. A single Zephyr source tree builds for every supported board; the per-`(board, bench)` `libmodel.a` is produced separately by the DeepGate compiler (https://bitweaver.deepgate.ai).
+Zephyr-based DUT firmware for the **MLPerf Tiny v1.4** Inference benchmarks. A single Zephyr source tree builds for every supported board; the per-`(board, bench)` `libmodel.a` is produced separately by the DeepGate compiler (https://app.deepgate.ai).
 
 ## Supported boards
 
@@ -62,7 +62,7 @@ uv run west build -b xg24_ek2703a firmware/vww01 && uv run west flash
 uv run west build -b xg24_ek2703a firmware/ad01  && uv run west flash
 ```
 
-This repo ships precompiled `firmware/<bench>/model/<board>/{lib/libmodel.a, include/model.h}` for all 10 `(board, bench)` pairs. To regenerate from `models/closed/<bench>/schema.json`, upload it to <https://bitweaver.deepgate.ai>, pick the target board, and drop the returned files in `firmware/<bench>/model/<board>/{lib,include}/`.
+This repo ships precompiled `firmware/<bench>/model/<board>/{lib/libmodel.a, include/model.h}` for all 10 `(board, bench)` pairs. To regenerate from `models/closed/<bench>/schema.json`, upload it to <https://app.deepgate.ai>, pick the target board, and drop the returned files in `firmware/<bench>/model/<board>/{lib,include}/`.
 
 ## Run a benchmark
 
