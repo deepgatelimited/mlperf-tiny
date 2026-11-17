@@ -1,0 +1,102 @@
+[
+  {
+    "target_name": "nucleo_h7a3zi_q-ic01",
+    "setup_cmd": "sudo apt-get update && sudo apt-get install -y ninja-build device-tree-compiler gperf && pip install 'west==1.5.0' && mkdir -p $HOME/zp/manifest && cp manifest/west.yml $HOME/zp/manifest/west.yml && cd $HOME/zp && west init -l manifest && west update --narrow -o=--depth=1 && west packages pip | xargs pip install && west sdk install --version 1.0.1 -t arm-zephyr-eabi --personal-access-token \"$GITHUB_TOKEN\"",
+    "build_cmd": "ZEPHYR_BASE=$HOME/zp/zephyr west build -p always -b nucleo_h7a3zi_q -d build/nucleo_h7a3zi_q-ic01 firmware/ic01",
+    "elf": "build/nucleo_h7a3zi_q-ic01/zephyr/zephyr.elf",
+    "ld": "build/nucleo_h7a3zi_q-ic01/zephyr/linker.cmd",
+    "map_file": "build/nucleo_h7a3zi_q-ic01/zephyr/zephyr.map",
+    "linker_vars": "",
+    "skip_sections": ""
+  },
+  {
+    "target_name": "nucleo_h7a3zi_q-ic02",
+    "setup_cmd": "sudo apt-get update && sudo apt-get install -y ninja-build device-tree-compiler gperf && pip install 'west==1.5.0' && mkdir -p $HOME/zp/manifest && cp manifest/west.yml $HOME/zp/manifest/west.yml && cd $HOME/zp && west init -l manifest && west update --narrow -o=--depth=1 && west packages pip | xargs pip install && west sdk install --version 1.0.1 -t arm-zephyr-eabi --personal-access-token \"$GITHUB_TOKEN\"",
+    "build_cmd": "ZEPHYR_BASE=$HOME/zp/zephyr west build -p always -b nucleo_h7a3zi_q -d build/nucleo_h7a3zi_q-ic02 firmware/ic02",
+    "elf": "build/nucleo_h7a3zi_q-ic02/zephyr/zephyr.elf",
+    "ld": "build/nucleo_h7a3zi_q-ic02/zephyr/linker.cmd",
+    "map_file": "build/nucleo_h7a3zi_q-ic02/zephyr/zephyr.map",
+    "linker_vars": "",
+    "skip_sections": ""
+  },
+  {
+    "target_name": "nucleo_h7a3zi_q-kws01",
+    "setup_cmd": "sudo apt-get update && sudo apt-get install -y ninja-build device-tree-compiler gperf && pip install 'west==1.5.0' && mkdir -p $HOME/zp/manifest && cp manifest/west.yml $HOME/zp/manifest/west.yml && cd $HOME/zp && west init -l manifest && west update --narrow -o=--depth=1 && west packages pip | xargs pip install && west sdk install --version 1.0.1 -t arm-zephyr-eabi --personal-access-token \"$GITHUB_TOKEN\"",
+    "build_cmd": "ZEPHYR_BASE=$HOME/zp/zephyr west build -p always -b nucleo_h7a3zi_q -d build/nucleo_h7a3zi_q-kws01 firmware/kws01",
+    "elf": "build/nucleo_h7a3zi_q-kws01/zephyr/zephyr.elf",
+    "ld": "build/nucleo_h7a3zi_q-kws01/zephyr/linker.cmd",
+    "map_file": "build/nucleo_h7a3zi_q-kws01/zephyr/zephyr.map",
+    "linker_vars": "",
+    "skip_sections": ""
+  },
+  {
+    "target_name": "nucleo_h7a3zi_q-vww01",
+    "setup_cmd": "sudo apt-get update && sudo apt-get install -y ninja-build device-tree-compiler gperf && pip install 'west==1.5.0' && mkdir -p $HOME/zp/manifest && cp manifest/west.yml $HOME/zp/manifest/west.yml && cd $HOME/zp && west init -l manifest && west update --narrow -o=--depth=1 && west packages pip | xargs pip install && west sdk install --version 1.0.1 -t arm-zephyr-eabi --personal-access-token \"$GITHUB_TOKEN\"",
+    "build_cmd": "ZEPHYR_BASE=$HOME/zp/zephyr west build -p always -b nucleo_h7a3zi_q -d build/nucleo_h7a3zi_q-vww01 firmware/vww01",
+    "elf": "build/nucleo_h7a3zi_q-vww01/zephyr/zephyr.elf",
+    "ld": "build/nucleo_h7a3zi_q-vww01/zephyr/linker.cmd",
+    "map_file": "build/nucleo_h7a3zi_q-vww01/zephyr/zephyr.map",
+    "linker_vars": "",
+    "skip_sections": ""
+  },
+  {
+    "target_name": "nucleo_h7a3zi_q-ad01",
+    "setup_cmd": "sudo apt-get update && sudo apt-get install -y ninja-build device-tree-compiler gperf && pip install 'west==1.5.0' && mkdir -p $HOME/zp/manifest && cp manifest/west.yml $HOME/zp/manifest/west.yml && cd $HOME/zp && west init -l manifest && west update --narrow -o=--depth=1 && west packages pip | xargs pip install && west sdk install --version 1.0.1 -t arm-zephyr-eabi --personal-access-token \"$GITHUB_TOKEN\"",
+    "build_cmd": "ZEPHYR_BASE=$HOME/zp/zephyr west build -p always -b nucleo_h7a3zi_q -d build/nucleo_h7a3zi_q-ad01 firmware/ad01",
+    "elf": "build/nucleo_h7a3zi_q-ad01/zephyr/zephyr.elf",
+    "ld": "build/nucleo_h7a3zi_q-ad01/zephyr/linker.cmd",
+    "map_file": "build/nucleo_h7a3zi_q-ad01/zephyr/zephyr.map",
+    "linker_vars": "",
+    "skip_sections": ""
+  },
+  {
+    "target_name": "xg24_ek2703a-ic01",
+    "setup_cmd": "sudo apt-get update && sudo apt-get install -y ninja-build device-tree-compiler gperf && pip install 'west==1.5.0' && mkdir -p $HOME/zp/manifest && cp manifest/west.yml $HOME/zp/manifest/west.yml && cd $HOME/zp && west init -l manifest && west update --narrow -o=--depth=1 && west packages pip | xargs pip install && west sdk install --version 1.0.1 -t arm-zephyr-eabi --personal-access-token \"$GITHUB_TOKEN\"",
+    "build_cmd": "ZEPHYR_BASE=$HOME/zp/zephyr west build -p always -b xg24_ek2703a -d build/xg24_ek2703a-ic01 firmware/ic01",
+    "elf": "build/xg24_ek2703a-ic01/zephyr/zephyr.elf",
+    "ld": "build/xg24_ek2703a-ic01/zephyr/linker.cmd",
+    "map_file": "build/xg24_ek2703a-ic01/zephyr/zephyr.map",
+    "linker_vars": "",
+    "skip_sections": ""
+  },
+  {
+    "target_name": "xg24_ek2703a-ic02",
+    "setup_cmd": "sudo apt-get update && sudo apt-get install -y ninja-build device-tree-compiler gperf && pip install 'west==1.5.0' && mkdir -p $HOME/zp/manifest && cp manifest/west.yml $HOME/zp/manifest/west.yml && cd $HOME/zp && west init -l manifest && west update --narrow -o=--depth=1 && west packages pip | xargs pip install && west sdk install --version 1.0.1 -t arm-zephyr-eabi --personal-access-token \"$GITHUB_TOKEN\"",
+    "build_cmd": "ZEPHYR_BASE=$HOME/zp/zephyr west build -p always -b xg24_ek2703a -d build/xg24_ek2703a-ic02 firmware/ic02",
+    "elf": "build/xg24_ek2703a-ic02/zephyr/zephyr.elf",
+    "ld": "build/xg24_ek2703a-ic02/zephyr/linker.cmd",
+    "map_file": "build/xg24_ek2703a-ic02/zephyr/zephyr.map",
+    "linker_vars": "",
+    "skip_sections": ""
+  },
+  {
+    "target_name": "xg24_ek2703a-kws01",
+    "setup_cmd": "sudo apt-get update && sudo apt-get install -y ninja-build device-tree-compiler gperf && pip install 'west==1.5.0' && mkdir -p $HOME/zp/manifest && cp manifest/west.yml $HOME/zp/manifest/west.yml && cd $HOME/zp && west init -l manifest && west update --narrow -o=--depth=1 && west packages pip | xargs pip install && west sdk install --version 1.0.1 -t arm-zephyr-eabi --personal-access-token \"$GITHUB_TOKEN\"",
+    "build_cmd": "ZEPHYR_BASE=$HOME/zp/zephyr west build -p always -b xg24_ek2703a -d build/xg24_ek2703a-kws01 firmware/kws01",
+    "elf": "build/xg24_ek2703a-kws01/zephyr/zephyr.elf",
+    "ld": "build/xg24_ek2703a-kws01/zephyr/linker.cmd",
+    "map_file": "build/xg24_ek2703a-kws01/zephyr/zephyr.map",
+    "linker_vars": "",
+    "skip_sections": ""
+  },
+  {
+    "target_name": "xg24_ek2703a-vww01",
+    "setup_cmd": "sudo apt-get update && sudo apt-get install -y ninja-build device-tree-compiler gperf && pip install 'west==1.5.0' && mkdir -p $HOME/zp/manifest && cp manifest/west.yml $HOME/zp/manifest/west.yml && cd $HOME/zp && west init -l manifest && west update --narrow -o=--depth=1 && west packages pip | xargs pip install && west sdk install --version 1.0.1 -t arm-zephyr-eabi --personal-access-token \"$GITHUB_TOKEN\"",
+    "build_cmd": "ZEPHYR_BASE=$HOME/zp/zephyr west build -p always -b xg24_ek2703a -d build/xg24_ek2703a-vww01 firmware/vww01",
+    "elf": "build/xg24_ek2703a-vww01/zephyr/zephyr.elf",
+    "ld": "build/xg24_ek2703a-vww01/zephyr/linker.cmd",
+    "map_file": "build/xg24_ek2703a-vww01/zephyr/zephyr.map",
+    "linker_vars": "",
+    "skip_sections": ""
+  },
+  {
+    "target_name": "xg24_ek2703a-ad01",
+    "setup_cmd": "sudo apt-get update && sudo apt-get install -y ninja-build device-tree-compiler gperf && pip install 'west==1.5.0' && mkdir -p $HOME/zp/manifest && cp manifest/west.yml $HOME/zp/manifest/west.yml && cd $HOME/zp && west init -l manifest && west update --narrow -o=--depth=1 && west packages pip | xargs pip install && west sdk install --version 1.0.1 -t arm-zephyr-eabi --personal-access-token \"$GITHUB_TOKEN\"",
+    "build_cmd": "ZEPHYR_BASE=$HOME/zp/zephyr west build -p always -b xg24_ek2703a -d build/xg24_ek2703a-ad01 firmware/ad01",
+    "elf": "build/xg24_ek2703a-ad01/zephyr/zephyr.elf",
+    "ld": "build/xg24_ek2703a-ad01/zephyr/linker.cmd",
+    "map_file": "build/xg24_ek2703a-ad01/zephyr/zephyr.map",
+    "linker_vars": "",
+    "skip_sections": ""
+  }
+]
