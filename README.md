@@ -1,5 +1,7 @@
 # MLPerf Tiny v1.4: DeepGate submission
 
+[![MemBrowse](https://membrowse.com/badge.svg)](https://membrowse.com/public/deepgatelimited/mlperf-tiny)
+
 Zephyr-based DUT firmware for the **MLPerf Tiny v1.4** Inference benchmarks. A single Zephyr source tree builds for every supported board; the per-`(board, bench)` `libmodel.a` is produced separately by the DeepGate compiler (https://app.deepgate.ai).
 
 ## Supported boards
